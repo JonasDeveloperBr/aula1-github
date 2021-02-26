@@ -10,6 +10,7 @@ public class ProgramAluguelQuartos {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
 		System.out.print("How many rooms will be rented?");
 		int qtdDeQuartosParaAlugar = sc.nextInt();
 		AluguelQuartos[] vet = new AluguelQuartos[10];
