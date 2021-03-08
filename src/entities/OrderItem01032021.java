@@ -5,29 +5,52 @@ import java.util.List;
 
 public class OrderItem01032021 {
 
-	private int quantity;
-	private double price;
-	private List<Product01032021> listProduct = new ArrayList<>();
+	private Integer quantity;
+	private Double price;
+	private Product01032021 product01032021;
 
-	public OrderItem01032021(int quantity, double price) {
+	public OrderItem01032021(int quantity, double price, Product01032021 product01032021) {
 		this.quantity = quantity;
 		this.price = price;
+		this.product01032021 = product01032021;
 	}
 	
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
 	
-	public double getPrice() {
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+	
+	public Double getPrice() {
 		return price;
 	}
 	
-	public double subTotal() {
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
+	public Product01032021 getProduct() {
+		return product01032021;
+	}
+	
+	public void setProduct01032021(Product01032021 product01032021) {
+		this.product01032021 = product01032021;
+	}
+	
+	public Double subTotal() {
 		return quantity * price;
 	}
 	
-	public List<Product01032021> getListProduct(){
-		return listProduct;
+	@Override
+	public String toString() {
+		return product01032021.getNome()
+				+ ", $"
+				+ String.format("%.2f", price)
+				+ ", Quantity: "
+				+ quantity +
+				", Subtotal: $"
+				+ String.format("%.2f", subTotal());
 	}
-	
 }

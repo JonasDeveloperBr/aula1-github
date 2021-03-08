@@ -3,7 +3,7 @@ package entities;
 public class Product01032021 {
 
 	private String name;
-	private double price;
+	private Double price;
 	
 	public Product01032021(String name, double price) {
 		this.name = name;
@@ -14,8 +14,15 @@ public class Product01032021 {
 		return name;
 	}
 	
-	public double getPrice() {
+	public void setNome(String name) {
+		this.name = name;
+	}
+	
+	public Double getPrice() {
 		return price;
 	}
-		
+	
+	public void setPrice(Double price) {
+		this.price = price;
+	}		
 }
