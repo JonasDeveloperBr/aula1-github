@@ -17,6 +17,8 @@ public class Program {
 			System.out.println("Invalid position!");
 		} catch (InputMismatchException e) {
 			System.out.println("Input error");
+			e.printStackTrace();
+			sc.next();
 		}
 		
 		System.out.println("End of program");
