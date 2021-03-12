@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import br.com.profNelio.aula191.model.entities.RentalCar;
 
-public class ProgramInterface {
+public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		
