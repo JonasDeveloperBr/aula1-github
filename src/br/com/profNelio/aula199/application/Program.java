@@ -1,17 +1,25 @@
 package br.com.profNelio.aula199.application;
 
-import br.com.profNelio.aula199.devices.Printer;
-import br.com.profNelio.aula199.devices.Scanner;
+import br.com.profNelio.aula199.devices.ComboDevice;
+import br.com.profNelio.aula199.devices.ConcretePrinter;
+import br.com.profNelio.aula199.devices.ConcreteScanner;
 
 public class Program {
 
 	public static void main(String[] args) {
-		Printer p = new Printer("1080");
+		ConcretePrinter p = new ConcretePrinter("1080");
 		p.processDoc("My letter");
 		p.print("My letter");
 		
-		Scanner s = new Scanner("2003");
+		System.out.println();
+		ConcreteScanner s = new ConcreteScanner("2003");
 		s.processDoc("My email");
 		System.out.println("Scan result: " + s.scan());
+		
+		System.out.println();
+		ComboDevice c = new ComboDevice("2081");
+		c.processDoc("My dissertation");
+		c.print("My dissertation");
+		System.out.println("Scan result: " + c.scan());
 	}
 }

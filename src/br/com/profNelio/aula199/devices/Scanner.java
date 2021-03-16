@@ -1,17 +1,7 @@
 package br.com.profNelio.aula199.devices;
 
-public class Scanner extends Device {
+public interface Scanner {
 
-	public Scanner(String serialNumber) {
-		super(serialNumber);
-	}
+	String scan();
 	
-	@Override
-	public void processDoc(String doc) {
-		System.out.println("Scanner processing: " + doc);
-	}
-	
-	public String scan() {
-		return "Scanned content";
-	}
 }
