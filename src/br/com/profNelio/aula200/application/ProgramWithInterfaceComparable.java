@@ -7,6 +7,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 
+ * @param args
+ * 
+ * This class implement list of the String with txt file,
+ * the file contents have no separator, that is, each 
+ * line is a value.
+ *
+ */
 public class ProgramWithInterfaceComparable {
 
 	public static void main(String[] args) {
