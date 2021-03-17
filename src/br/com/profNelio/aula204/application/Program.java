@@ -10,7 +10,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		
-		PrintService ps = new PrintService();
+		PrintService<Integer> ps = new PrintService<>();
 		
 		System.out.print("How many values? ");
 		int n = sc.nextInt();
@@ -27,12 +27,3 @@ public class Program {
 	}
 
 }
-/**
- * 
-How many values? 3
-4
-3
-2
-[4, 3, 2]
-Firs: 4
- */
