@@ -19,6 +19,7 @@ import java.util.List;
 public class ProgramWithInterfaceComparable {
 
 	public static void main(String[] args) {
+		
 		List<String> list = new ArrayList<>();
 		String path = "C:\\temp\\in2.txt";
 		

@@ -1,6 +1,8 @@
 package br.com.profNelio.aula210.application;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -19,6 +21,9 @@ public class Program {
 		Product prod = new Product("Notebook", 1200.00);
 		
 		System.out.println(set.contains(prod));
+		System.out.println();
+		System.out.println("List of product set:");
+		for (Product p : set) {System.out.println(p);}
 		
 		System.out.println();
 		System.out.println("--------------------------");
@@ -34,6 +39,21 @@ public class Program {
 		for (Product p : setTreeSet) {
 			System.out.println(p);
 		}
+		
+		System.out.println();
+		System.out.println("------ Using ArrayList ------");
+		System.out.println();
+		
+		List<Product> prodList = new ArrayList<>();
+		prodList.add(new Product("Mouse", 2.00));
+		prodList.add(new Product("Keyboard", 50.00));
+		prodList.add(new Product("Screen LG Ultrawide", 300.00));
+		prodList.add(new Product("Mouse", 2.00));
+		System.out.println();
+		for (Product p : prodList) {System.out.println(p);}
+		
+		
+		
 	}
 
 }

@@ -24,7 +24,8 @@ public class ProgramTwo {
 				list.add(new Employee(fields[0], Double.parseDouble(fields[1])));
 				employeeCsv = br.readLine();
 			}
-			Collections.sort(list);
+			Collections.sort(list);//Here use method compareTo()
+			System.out.println("Total of employee: " + list.size());
 			for (Employee employee : list) {
 				System.out.println(employee);
 			}
