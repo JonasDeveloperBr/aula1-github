@@ -21,16 +21,16 @@ public class ProgramTwo {
 		
 		System.out.println("Show 1");
 		for (Product p : stock.keySet()) {
-			System.out.println(p.getName() + "" + p.getPrice());
+			System.out.println(p.getName() + " " + p.getPrice());
 		}
 		System.out.println();
 		
 		Product ps = new Product("TV", 900.00);
 
-		stock.put(ps, 900.00);
+		stock.put(ps, 9000.00);
 		System.out.println("Show 2");
 		for (Product p : stock.keySet()) {
-			System.out.println(p.getName() + "" + p.getPrice());
+			System.out.println(p.getName() + " " + p.getPrice());
 		}
 		System.out.println();
 		
