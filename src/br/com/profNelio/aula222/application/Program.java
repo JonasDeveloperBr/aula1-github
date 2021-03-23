@@ -17,7 +17,7 @@ public class Program {
 		
 		list.add(new Product("Tv", 900.00));
 		list.add(new Product("Mouse", 50.00));
-		list.add(new Product("Tablet", 350.00));
+		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
 		System.out.println("Before of the update");
@@ -34,7 +34,7 @@ public class Program {
 		List<Product> list1 = new ArrayList<>();
 		list1.add(new Product("Tv", 900.00));
 		list1.add(new Product("Mouse", 50.00));
-		list1.add(new Product("Tablet", 350.00));
+		list1.add(new Product("Tablet", 350.50));
 		list1.add(new Product("HD Case", 80.90));
 
 		list1.forEach(Product::staticPriceUpdate);	//Do the update using reference method with static method
@@ -46,7 +46,7 @@ public class Program {
 		List<Product> list2 = new ArrayList<>();
 		list2.add(new Product("Tv", 900.00));
 		list2.add(new Product("Mouse", 50.00));
-		list2.add(new Product("Tablet", 350.00));
+		list2.add(new Product("Tablet", 350.50));
 		list2.add(new Product("HD Case", 80.90));
 		
 		Consumer<Product> cons = p -> {
@@ -55,6 +55,17 @@ public class Program {
 		
 		list2.forEach(cons);	//Do update uses a variable cons where has a anonymous function
 		list2.forEach(System.out::println);
+		System.out.println("-----------------");
+		
+		//Expression lambda in line
+		List<Product> list3 = new ArrayList<>();
+		list3.add(new Product("Tv", 900.00));
+		list3.add(new Product("Mouse", 50.00));
+		list3.add(new Product("Tablet", 350.00));
+		list3.add(new Product("HD Case", 80.90));
+		
+		list3.forEach(p -> p.setPrice(p.getPrice() * 1.1));
+		list3.forEach(System.out::println);
 	}
 
 }
