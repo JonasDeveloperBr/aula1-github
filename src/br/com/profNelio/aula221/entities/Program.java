@@ -9,7 +9,7 @@ public class Program {
 	public static void main(String[] args) {
 
 		List<Product> list = new ArrayList<>();
-		List<Product> list2, list3, list4;
+		List<Product> list2, list3, list4, list5;
 		
 		list.add(new Product("Tv", 900.00));
 		list.add(new Product("Mouse", 50.00));
@@ -19,6 +19,7 @@ public class Program {
 		list2 = new ArrayList<>(list);
 		list3 = new ArrayList<>(list);
 		list4 = new ArrayList<>(list);
+		list5 = new ArrayList<>(list);
 		
 		//Using ProductPredicate class
 		list.removeIf(new ProductPredicate());
@@ -29,6 +30,8 @@ public class Program {
 		//or
 		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
 		list4.removeIf(pred);
+		//or
+		list5.removeIf(p -> p.getPrice() >= 100.0);
 		
 		for (Product p : list) {
 			System.out.println(p);
@@ -44,6 +47,10 @@ public class Program {
 		}
 		System.out.println("--------------");
 		for (Product p : list4) {
+			System.out.println(p);
+		}
+		System.out.println("--------------");
+		for (Product p : list5) {
 			System.out.println(p);
 		}
 	}
