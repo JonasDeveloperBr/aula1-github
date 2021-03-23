@@ -58,6 +58,69 @@ public class Program {
 		Function<Product, String> func = p -> p.getName().toUpperCase();
 		List<String> names3 = list3.stream().map(func).collect(Collectors.toList());
 		names3.forEach(System.out::println);
+		System.out.println("----------------------------");
+
+		List<Product> list4 = new ArrayList<>();
+		list4.add(new Product("Tv", 900.00));
+		list4.add(new Product("Mouse", 50.00));
+		list4.add(new Product("Tablet", 350.50));
+		list4.add(new Product("HD Case", 80.90));
+		
+		List<String> names4 = list4.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+		names4.forEach(System.out::println);
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
