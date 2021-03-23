@@ -27,6 +27,16 @@ public class Program {
 		System.out.println("----------------------------");
 		
 		
+		List<Product> list1 = new ArrayList<>();
+		list1.add(new Product("Tv", 900.00));
+		list1.add(new Product("Mouse", 50.00));
+		list1.add(new Product("Tablet", 350.50));
+		list1.add(new Product("HD Case", 80.90));
+		
+		List<String> names2 = list1.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		names2.forEach(System.out::println);
+		System.out.println("----------------------------");
+		
 	}
 
 }
