@@ -3,6 +3,7 @@ package br.com.profNelio.aula223.application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import br.com.profNelio.aula223.entities.Product;
@@ -48,6 +49,15 @@ public class Program {
 		names2.forEach(System.out::println);
 		System.out.println("----------------------------");
 
+		List<Product> list3 = new ArrayList<>();
+		list3.add(new Product("Tv", 900.00));
+		list3.add(new Product("Mouse", 50.00));
+		list3.add(new Product("Tablet", 350.50));
+		list3.add(new Product("HD Case", 80.90));
+		
+		Function<Product, String> func = p -> p.getName().toUpperCase();
+		List<String> names3 = list3.stream().map(func).collect(Collectors.toList());
+		names3.forEach(System.out::println);
 	}
 
 }
