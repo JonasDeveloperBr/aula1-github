@@ -13,14 +13,17 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		List<Product> list = new ArrayList<>();
-		List<Product> list1;
+		List<Product> list1 = new ArrayList<>();
 		
 		list.add(new Product("Tv", 900.00));
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.00));
 		list.add(new Product("HD Case", 80.90));
 
-		list1 = new ArrayList<>(list);
+		list1.add(new Product("Tv", 900.00));
+		list1.add(new Product("Mouse", 50.00));
+		list1.add(new Product("Tablet", 350.00));
+		list1.add(new Product("HD Case", 80.90));
 		
 		System.out.println("Before of the update");
 		list.forEach(System.out::println);
@@ -32,6 +35,7 @@ public class Program {
 		
 		System.out.println("-----------------");
 		
+		//Reference method with method non static
 		list1.forEach(Product::staticPriceUpdate);	//Do the update using reference method with static method
 		list1.forEach(System.out::println);			//Print list
 		
