@@ -2,7 +2,9 @@ package br.com.profNelio.aula227.application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -17,7 +19,7 @@ public class Program {
 	public static void main(String[] args) {
 
 		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		
 		
 		System.out.print("Enter full file path: ");
 		String path = sc.nextLine();
@@ -55,7 +57,16 @@ public class Program {
 			System.out.println(e.getMessage());
 		}
 		
+		
 		sc.close();
 	}
 
 }
+/**
+Tv,900.00
+Mouse,50.00
+Tablet,350.50
+HD Case,80.90
+Computer,850
+Monitor,290
+ */
