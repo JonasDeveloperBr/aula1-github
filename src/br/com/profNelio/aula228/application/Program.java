@@ -29,13 +29,8 @@ public class Program {
 			
 			String line = br.readLine();
 			while (line != null) {
-				String[] strBuffer = line.split(",");
-				String name = strBuffer[0];
-				String email = strBuffer[1];
-				double salary = Double.parseDouble(strBuffer[2]);
-				
-				list.add(new Employee(name, email, salary));
-
+				String[] strBuffer = line.split(",");				
+				list.add(new Employee(strBuffer[0], strBuffer[1], Double.parseDouble(strBuffer[2])));
 				line = br.readLine();
 			}
 
@@ -46,13 +41,13 @@ public class Program {
 			//List email of employees that salary > parameter paramSalary
 			System.out.print("Please, entry salary for filter emails: ");
 			double paramSalary = sc.nextDouble();
-			Comparator<String> comp = (s1, s2) -> s1.toUpperCase().compareTo(s2.toUpperCase());
-			List<String> names = list.stream()
+			List<String> emailList = list.stream()
 					.filter(p -> p.getSalary() > paramSalary)
 					.map(p -> p.getEmail())
-					.sorted(comp)
+					.sorted()
 					.collect(Collectors.toList());
-			names.forEach(System.out::println);
+			System.out.println("Email of employee whose salary is more than " + String.format("%.2f", paramSalary));
+			emailList.forEach(System.out::println);
 			
 			//Sum salary of the employees that name start with letter 'M'.
 			System.out.println();
