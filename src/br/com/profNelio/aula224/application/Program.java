@@ -23,6 +23,16 @@ public class Program {
 		double sum = ps.filteredSum(list);
 		
 		System.out.println("Sum = " + String.format("%.2f", sum));
+		System.out.println("---------------------");
+		
+		//Uses expression lambda and Predicate on method filteredSum2
+		double sum2 = ps.filteredSum2(list, p -> p.getName().charAt(0) == 'T');
+		System.out.println("Sum = " + String.format("%.2f", sum2));
+		
+		System.out.println("Sum = " + String.format("%.2f", ps.filteredSum2(list, p -> p.getPrice() < 100.00)));
+		System.out.println("Sum = " + String.format("%.2f", ps.filteredSum2(list, p -> p.getPrice() > 0.0)));
+		System.out.println("---------------------");
+		
 	}
 
 }
