@@ -21,8 +21,9 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);		
 		
-		System.out.print("Enter full file path: ");
-		String path = sc.nextLine();
+//		System.out.print("Enter full file path: ");
+//		String path = sc.nextLine();
+		String path = "c:\\temp\\listProduct2.txt";
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){
 			
